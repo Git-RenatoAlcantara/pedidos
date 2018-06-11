@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Renato
@@ -16,6 +18,14 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
      */
     public TelaNovoPedido() {
         initComponents();
+         ArrayList<String> itens = new ArrayList<>();
+        for (int i = 1; i < 51; i++) {
+              itens.add(" Campanha " +i);
+        }
+        
+        for (int i = 0; i < itens.size(); i++) {
+            jComboListas.addItem(itens.get(i));
+        }
     }
 
     /**
@@ -30,7 +40,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnConfirmarCampanha = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboListas = new javax.swing.JComboBox<>();
 
         jLabel1.setFont(new java.awt.Font("Constantia", 1, 18)); // NOI18N
         jLabel1.setText("Insira o numero da campanha");
@@ -55,8 +65,6 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Campanha 01", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,7 +77,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnConfirmarCampanha, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboListas, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jLabel1)))
@@ -81,7 +89,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
                 .addGap(47, 47, 47)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboListas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -106,7 +114,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConfirmarCampanha;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboListas;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
