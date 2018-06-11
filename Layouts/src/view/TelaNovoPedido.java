@@ -6,6 +6,7 @@
 package view;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -107,7 +108,8 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
 
     private void btnConfirmarCampanhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarCampanhaActionPerformed
         // TODO add your handling code here:
-        
+        Object selected = jComboListas.getSelectedItem();
+        JOptionPane.showMessageDialog(null, selected);
     }//GEN-LAST:event_btnConfirmarCampanhaActionPerformed
 
 
