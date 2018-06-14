@@ -33,6 +33,23 @@ public class ClassPedidoJtable extends AbstractTableModel {
     public int getColumnCount() {
         return colunas.length;
     }
+    
+    @Override
+    public boolean isCellEditable(int linha, int coluna) {
+        return true;
+    }
+    
+    @Override
+    public void setValueAt(Object valor, int linha, int coluna){
+        if( valor == null) return;
+         
+        switch(coluna){
+            case 0:  dados.get(linha).setDescricao((String) valor);break;
+            case 1:  dados.get(linha).setQuantidade(Integer.parseInt((String) valor));break;
+            case 2:  dados.get(linha).setPreco(Double.parseDouble((String) valor));break;
+        } 
+        this.fireTableRowsUpdated(linha, linha);
+    }
 
     @Override
     public Object getValueAt(int linha, int coluna) {
@@ -54,10 +71,7 @@ public class ClassPedidoJtable extends AbstractTableModel {
         this.fireTableDataChanged();
         
     }
-    @Override
-    public boolean isCellEditable(int linha, int coluna) {
-        return true;
-    }
+   
     
     
 }

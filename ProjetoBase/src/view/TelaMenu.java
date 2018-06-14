@@ -5,17 +5,21 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Renato
  */
 public class TelaMenu extends javax.swing.JInternalFrame {
-
+TelaNovoPedido  telaNovoPedido = new TelaNovoPedido();
     /**
      * Creates new form TelaMenu
      */
     public TelaMenu() {
         initComponents();
+   
+                
     }
 
     /**
@@ -103,12 +107,19 @@ public class TelaMenu extends javax.swing.JInternalFrame {
 
     private void btnNovoPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoPedidoActionPerformed
         // TODO add your handling code here:
-     TelaNovoPedido novoPedido = new TelaNovoPedido();
-     Desktop.JMenuDesktop.add(novoPedido);
-     novoPedido.setVisible(true);
+        if (telaNovoPedido.isVisible() == false) {
+            try {
+                Desktop.JMenuDesktop.add(telaNovoPedido);
+                telaNovoPedido.setVisible(true);
+       
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Ao fechar aguarde");
+            }
+        }
+      
     
     }//GEN-LAST:event_btnNovoPedidoActionPerformed
-
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNovoPedido;

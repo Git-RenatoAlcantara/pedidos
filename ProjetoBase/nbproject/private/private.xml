@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Renato/Documents/github/pedidos/Layouts/src/view/TelaNovoPedido.java</file>
-            <file>file:/C:/Users/Renato/Documents/github/pedidos/Layouts/src/view/TelaJtable.java</file>
-            <file>file:/C:/Users/Renato/Documents/github/pedidos/Layouts/src/view/Desktop.java</file>
-            <file>file:/C:/Users/Renato/Documents/github/pedidos/Layouts/src/model/Pedidos.java</file>
+            <file>file:/C:/Users/Renato/Documents/NetBeansProjects/pedidos/pedidos/ProjetoBase/src/view/TelaJtable.java</file>
+            <file>file:/C:/Users/Renato/Documents/NetBeansProjects/pedidos/pedidos/ProjetoBase/src/model/ClassPedidoJtable.java</file>
+            <file>file:/C:/Users/Renato/Documents/NetBeansProjects/pedidos/pedidos/ProjetoBase/src/view/Desktop.java</file>
         </group>
     </open-files>
 </project-private>
