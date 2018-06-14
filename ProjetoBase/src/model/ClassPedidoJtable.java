@@ -72,6 +72,9 @@ public class ClassPedidoJtable extends AbstractTableModel {
         
     }
    
-    
+    public void removeRow(int linha){
+        this.dados.remove(linha);
+        this.fireTableRowsDeleted(linha, linha);
+    }
     
 }

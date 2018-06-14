@@ -79,6 +79,11 @@ public class TelaJtable extends javax.swing.JInternalFrame {
         btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8_Delete_20px.png"))); // NOI18N
         btnExcluir.setText("  Excluir");
         btnExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnAtualizar.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         btnAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8_Restart_20px.png"))); // NOI18N
@@ -301,6 +306,13 @@ public class TelaJtable extends javax.swing.JInternalFrame {
     private void btnSalvarPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarPDFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSalvarPDFActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+        if (jTable.getSelectedRow() != 1) {
+           pedidosJtable.removeRow(jTable.getSelectedRow());
+        }
+    }//GEN-LAST:event_btnExcluirActionPerformed
     
     public void recebeNuemPedido(String numPedido){
         txtTitulo.setText(numPedido);

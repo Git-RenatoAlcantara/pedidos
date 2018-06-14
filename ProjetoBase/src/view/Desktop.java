@@ -5,6 +5,7 @@
  */
 package view;
 
+import DAO.Conexao;
 import javax.swing.JFrame;
 
 /**
@@ -19,6 +20,9 @@ public class Desktop extends javax.swing.JFrame {
      */
     public Desktop() {
         initComponents();
+        Conexao conexao = new Conexao();
+        conexao.conectar();
+        conexao.desconectar();
     }
 
     /**
