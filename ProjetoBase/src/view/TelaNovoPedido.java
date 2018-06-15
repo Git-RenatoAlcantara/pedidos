@@ -5,6 +5,8 @@
  */
 package view;
 
+import DAO.Conexao;
+import DAO.CriarTabela;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Pedidos;
@@ -14,6 +16,7 @@ import model.Pedidos;
  * @author Renato
  */
 public class TelaNovoPedido extends javax.swing.JInternalFrame {
+  Conexao conexao = new Conexao();
   TelaJtable telaJtable;
     public TelaNovoPedido() {
         initComponents();
@@ -24,7 +27,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
         for (int i = 1; i < 51; i++) {
             
             //Adicionando 50 vezes a palvra Camapanha concatenado com o i e adicionando ao arrays.
-              itens.add(" Campanha " +i);
+              itens.add(" campanha_"+i);
         }
         
         //Laço que percorre o array itens e adiciona ao ComboBox.
@@ -128,7 +131,8 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
        //Menssagem de confirmção do numero da camapanha        
         JOptionPane.showMessageDialog(null,"Deseja colocar pedido na campanha: "+selected+" ?");
        
-
+        CriarTabela novaTabela = new CriarTabela(conexao);
+        novaTabela.criarTabelaPedidos(selected);
         //Verificando se a telaJtable não foi istanciada.
          if (telaJtable == null) {
             telaJtable = new TelaJtable();
@@ -137,7 +141,7 @@ public class TelaNovoPedido extends javax.swing.JInternalFrame {
         telaJtable.setVisible(true);
         //Passando o item selecionado para o metodo contido na class TelaJtable.
         telaJtable.recebeNuemPedido(selected);
-       
+        
        //Chamando tela que conte jtable com a tebela pra pedidos
         Desktop.JMenuDesktop.add(telaJtable);
         
